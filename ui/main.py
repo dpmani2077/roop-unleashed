@@ -79,7 +79,7 @@ def run():
         except (KeyboardInterrupt, OSError):
             print("Keyboard interruption in main thread... closing server.")
             run_server = False
-        ui.close()
+        # ui.close()
 
 
 def show_msg(msg: str):
