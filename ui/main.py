@@ -67,8 +67,8 @@ def run():
 
         uii.ui_restart_server = False
         try:
-            ui.queue().launch(share=True)
-            # ui.queue().launch(share=True,inbrowser=True, server_name=server_name, server_port=server_port,  ssl_verify=ssl_verify, prevent_thread_lock=True, show_error=True)
+            
+            ui.queue().launch(share=True,inbrowser=True, server_name=server_name, server_port=server_port,  ssl_verify=ssl_verify, prevent_thread_lock=True, show_error=True)
         except Exception as e:
             print(f'Exception {e} when launching Gradio Server!')
             uii.ui_restart_server = True
@@ -79,7 +79,7 @@ def run():
         except (KeyboardInterrupt, OSError):
             print("Keyboard interruption in main thread... closing server.")
             run_server = False
-        # ui.close()
+         ui.close()
 
 
 def show_msg(msg: str):
